@@ -3,7 +3,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url('https://imagehost.imageupload.net/2020/06/25/914941.jpg') no-repeat;
+    background: url('https://imagehost.imageupload.net/2020/06/25/914941.jpg') no-repeat;
     background-size: cover;
     text-align: center;
     
