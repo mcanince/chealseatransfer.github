@@ -4238,3 +4238,44 @@ if(window.jQuery && window.fullpage){
 }
 
 
+const firstname=document.getElementById("name")
+const surname=document.getElementById("email")
+const age=document.getElementById("subject")
+const id=document.getElementById("message1")
+
+
+
+
+const addBtn=document.getElementById("addBtn")
+const yazi=document.getElementById("selam")
+
+
+
+
+
+
+const database=firebase.database();
+const rootRef=database.ref('users');
+var autoid;
+
+
+addBtn.addEventListener("click",(e)=>{
+  e.preventDefault();
+
+if (id.value===""){
+  var autoid=rootRef.push().key
+
+}
+else{
+   var autoid=firstname.value;
+}
+ rootRef.child(autoid).set( {
+         mail: surname.value,
+         subject: age.value,
+         message: id.value,
+        
+         
+     });
+selam.innerHTML="Your message has been sent. Thank you! &#x1F60A;"
+     
+});
